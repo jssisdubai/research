@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSSIS Research</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">JSSIS Research</div>
+        <div class="btns">
+            <ul>
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="html/view.html">VIEW</a>
+                </li>
+                <li>
+                    <a href="html/apply.html">APPLY</a>
+                </li>
+            </ul>
+        </div>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+    <main>
+        <h1>JSSIS Research</h1>
+        <p>Shaping minds, and creating futures where your ideas take flight.</p>
+        <a href="html/view.html" class="view-title-btn">View researches</a>
+    </main>
+    <script>
+        function toggleMenu() {
+        var nav = document.querySelector('.btns ul');
+        nav.classList.toggle('show-menu');
+    }
+    </script>
+</body>
+</html>

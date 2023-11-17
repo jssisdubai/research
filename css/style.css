@@ -1,0 +1,164 @@
+:root {
+    --secondary: rgb(139, 169, 48);
+    --primary: #1982c4;
+    
+    --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    --white: #eff1ed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    background-image: url('../images/research-home2.png')
+}
+
+/* navbar */
+
+header {
+    background-color: #006494; 
+    color: var(--white);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+.logo {
+    flex-grow: 1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btns {
+    text-align: right;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--white); 
+    padding: 5px 15px;
+    border-radius: 0px;
+    transition: all 0.3s;
+    border-left: 1px solid var(--white); 
+}
+
+header a:hover {
+    color: #132a13;
+}
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.burger-menu div {
+    width: 30px;
+    height: 3px;
+    background-color: var(--white);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* main content */
+
+main {
+    max-height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 10rem;
+}
+
+main h1 {
+    font-size: 4.5rem;
+    color: var(--white);
+}
+
+main p {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.view-title-btn {
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--primary);
+    padding: 15px;
+    border-radius: 6px;
+    transition: all 0.3s;
+    box-shadow: var(--box-shadow);
+}
+
+.view-title-btn:hover {
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+@media only screen and (max-width: 768px) {
+    .btns ul {
+        display: none;
+    }
+
+    .btns ul.show-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        width: 100%;
+        background-color: #006494;
+        z-index: 1;
+        padding: 10px;
+    }
+
+    header a {
+        border: none;
+    }
+
+    .btns ul li {
+        margin-bottom: 10px;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    /* main content */
+
+    main h1 {
+        font-size: 2.3rem;
+    }
+
+    main p {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
+    .view-title-btn {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+}

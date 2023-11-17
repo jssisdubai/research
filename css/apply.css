@@ -1,0 +1,150 @@
+:root {
+    --secondary: rgb(139, 169, 48);
+    --primary: #1982c4;
+    --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --white: #eff1ed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #051923;
+    background-attachment: fixed;
+    color: var(--white);
+}
+
+/* navbar styling */
+
+header {
+    background-color: #006494;
+    color: var(--white);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+.logo {
+    flex-grow: 1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btns {
+    text-align: right;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header li {
+    display: inline-block;
+    color: var(--white);
+}
+
+header a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 0px;
+    transition: color 0.3s;
+    border-left: 1px solid var(--white);
+}
+
+header a:hover {
+    color: #132a13;
+}
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.burger-menu div {
+    width: 30px;
+    height: 3px;
+    background-color: var(--white);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* article section styling */
+
+main {
+    padding: 30px;
+}
+
+.article {
+    background-color: #12232e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.subtitle {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* tips section styling */
+
+.subtitle:last-of-type {
+    margin-top: 40px;
+}
+
+ul:last-of-type a:hover {
+    color: #132a13;
+}
+
+@media only screen and (max-width: 768px) {
+    .btns ul {
+        display: none;
+    }
+
+    .btns ul.show-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        width: 100%;
+        background-color: #006494;
+        z-index: 1;
+        padding: 10px;
+    }
+
+    header a {
+        border: none;
+    }
+
+    .btns ul li {
+        margin-bottom: 10px;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+}

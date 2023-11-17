@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSSIS Research - View</title>
+    <link rel="stylesheet" href="../css/view.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">JSSIS Research</div>
+        <div class="btns">
+            <ul>
+                <li>
+                    <a href="../index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="view.html">VIEW</a>
+                </li>
+                <li>
+                    <a href="apply.html">APPLY</a>
+                </li>
+            </ul>
+        </div>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+    <main>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search by title or author" onkeydown="if (event.keyCode == 13) searchResearch()">
+            <button onclick="searchResearch()">Search</button>
+        </div>
+
+        <a class="research-block-a" href="../pdf/AnanyaNaik_AttitudesResearchPaper.pdf">
+            <div class="research-block">
+                <img src="../images/ananya-naik.jpeg" alt="">
+                <div class="info">
+                    <p class="title">Comparison of attitude of Gen-Z and millenials towards healthy standards in a friendship.</p>
+                    <p class="author">Ananya Govindrao Naik</p>
+                </div>
+            </div>
+        </a>
+        <a class="research-block-a" href="../pdf/Cell Structure and Membrane Transduction.pdf">
+            <div class="research-block">
+                <img src="../images/sameen-sange.jpeg" alt="">
+                <div class="info">
+                    <p class="title">Cell Structure and Membrane Transduction.</p>
+                    <p class="author">Sameen Sange</p>
+                </div>
+            </div>
+        </a>
+        <a class="research-block-a" href="../pdf/Gene Therapy VS Chemotherapy.pdf">
+            <div class="research-block">
+                <img src="../images/joshyitha.jpeg" alt="">
+                <div class="info">
+                    <p class="title">Gene Therapy VS Chemotherapy.</p>
+                    <p class="author">Joshyitha Arun Kumar</p>
+                </div>
+            </div>
+        </a>
+    </main>
+
+    <script>
+        function searchResearch() {
+            var searchInput = document.getElementById('searchInput').value.toLowerCase();
+    
+            var researchBlocks = document.querySelectorAll('.research-block-a');
+    
+            researchBlocks.forEach(function (block) {
+                var title = block.querySelector('.title').textContent.toLowerCase();
+                var author = block.querySelector('.author').textContent.toLowerCase();
+    
+                if (title.includes(searchInput) || author.includes(searchInput)) {
+                    block.style.display = 'block';
+                } else {
+                    block.style.display = 'none';
+                }
+            });
+        }
+    
+    function toggleMenu() {
+        var nav = document.querySelector('.btns ul');
+        nav.classList.toggle('show-menu');
+    }
+    </script>
+    
+</body>
+</html>
